@@ -1,17 +1,21 @@
-@media (max-width: 1200px) {
-
+@media (max-width: 1085px) {
+    .carusel .next, .carusel .prev {
+        display: none;
+    }
+    .catalog .catalog__content {
+        justify-content: space-evenly;
+    }
 }
 @media (max-width: 991px) {
-    .promo {
-        &__icons {
-            margin-right: 40px;
-        }
-        &__link {
-            margin-right: 80px;
-        }
+    .promo .promo__icon {
+        padding-right: 40px;
     }
-    .button_main {
-        margin-right: 80px
+    .promo .promo__link {
+        padding-right: 80px;
+    }
+    
+    .promo .button_main {
+        margin-right: 80px;
     }
     .consultation .container {
         padding-left: 40px;
@@ -22,25 +26,42 @@
     .header {
         padding: 0 40px 0 40px; 
     }
-    .promo {
-        &__header {
-            padding-right: 50px;
-        }
-        h2 {
-            padding-right: 50px;
-        }
-        &__icons {
-            padding-right: 55px
-        }
+    .promo .promo__header{ 
+        padding-right: 50px;
     }
-    .advantage {
-        &__wrapper {
-            padding: 0 10px 0 10px;
-        }
+    .promo h2 {
+        padding-right: 50px;
     }
+    .promo .promo__icon {
+        padding-right: 55px
+    }
+    .advantage .advantage__wrapper {
+        padding: 0 10px 0 10px;
+    }
+    
     .consultation .title {
         font-size: 24px;
     }
+    
+    .feedback .feedback__img {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    .feedback .feedback__content {
+        padding: 0 40px 0 40px;
+    }
+
+    .feedback .feedback__descr {
+        font-size: 15px;
+        width: 100%;
+    }
+
+    .feedback .feedback__block {
+        flex-direction: column;
+    }
+    
 }
 
 @media (max-width: 575px) {
@@ -50,49 +71,51 @@
         padding: 0 10px 0 10px; 
         flex-direction: column;
         justify-content: center;
-        &__official {
-            display: none;
-        }
-        &__phone {
-            margin-top: 20px;
-            text-align: center;
-        }
-        .button {
-            width: 200px;
-        }
+        align-items: center;
     }
-    .promo {
-        &__header {
-            text-align: center;
-            padding-right: 0;
-        }
-        h2 {
-            text-align: center;
-            padding-right: 0;
-        }
-        &__icons {
-            align-items: center;
-            text-align: center;
-            padding-right: 35px;
-            padding-left: 35px;
-            margin-right: 0;
-            justify-content: space-around;
-        }
-        .button_main {
-            margin-right: 0;
-            margin: 25px auto;
-        }
+    .header .header__official {
+        display: none;
     }
-    .advantage {
-        &__wrapper {
-            flex-direction: column;
-        }
-        &__block {
-            padding-top: 20px;
-        }
-        &__subheader {
-            margin-top: 0;
-        }
+    .header .header__contacts {
+        align-items: center;
+    } 
+    .header .header__phone {
+        display: block;
+        margin-top: 20px;
+        
+    }
+    .header  .button {
+        width: 200px;
+    }
+    .promo .promo__header{
+       
+        text-align: center;
+        padding-right: 0;
+    }
+    .promo h2 {
+        text-align: center;
+        padding-right: 0;
+    }
+    .promo .promo__icons {
+        align-items: center;
+        text-align: center;
+        padding-right: 35px;
+        padding-left: 35px;
+        margin-right: 0;
+        justify-content: space-around;
+    }
+    .promo .button_main {
+        margin-right: 0;
+        margin: 25px auto;    
+    }
+    .advantage .advantage__wrapper {
+       flex-direction: column;
+    }   
+    .advantage .advantage__block{
+        padding-top: 20px;
+    }
+    .advantage .advantage__subheader {
+        margin-top: 0;
     }
 
     .consultation .container {
@@ -112,8 +135,6 @@
         margin: 30px auto;
     }
 
-    
-
     .carusel .carusel__inner  {
             width: 100%;
             img {
@@ -121,4 +142,6 @@
         }
         
     }
+
+
 }
