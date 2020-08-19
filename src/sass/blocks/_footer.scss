@@ -6,7 +6,7 @@
         top: 0;
         left: 50%;
         transform: translateX(-50%);
-        width: 460px;
+        max-width: 460px;
         height: 270px;    
         background-color: $main-color;
         padding: 50px 68px 60px 68px;
@@ -25,8 +25,9 @@
         text-align: center;
         color: #ffffff;
         margin-bottom: 38px;
-        :hover {
+        &:hover {
             color: #ffffff;
+            text-decoration: none;
         }
     }
     &__social-item {
@@ -38,10 +39,14 @@
         border: solid 2px #ffffff;
         border-radius: 100%;
         margin: 0 15px;
-        // background-color: #ffffff;
+        // transition: 1s all;
+        &:hover {
+            background-color: #af5b5b;
+            box-shadow: 3px 2px 20px #fff;
+            border: solid 3px #ffffff;
+        }
         img {
-            height: 27px;
-            
+            height: 27px;    
         }
     }
     &__social {
@@ -50,3 +55,5 @@
         align-items: center;
     }
 }
+
+

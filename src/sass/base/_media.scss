@@ -81,14 +81,12 @@
     } 
     .header .header__phone {
         display: block;
-        margin-top: 20px;
-        
+        margin-top: 20px;  
     }
     .header  .button {
         width: 200px;
     }
-    .promo .promo__header{
-       
+    .promo .promo__header{      
         text-align: center;
         padding-right: 0;
     }
@@ -96,13 +94,18 @@
         text-align: center;
         padding-right: 0;
     }
+
+    .promo .promo__wrapper {
+        margin-top: 50px;
+    }
+
+    .promo h1 {
+        font-size: 30px;
+    }
+
     .promo .promo__icons {
         align-items: center;
-        text-align: center;
-        padding-right: 35px;
-        padding-left: 35px;
-        margin-right: 0;
-        justify-content: space-around;
+        justify-content: center;
     }
     .promo .button_main {
         margin-right: 0;
@@ -117,11 +120,9 @@
     .advantage .advantage__subheader {
         margin-top: 0;
     }
-
     .consultation .container {
         padding: 10px 30px 10px 30px;
     }
-
     .consultation .title {
         font-size: 18px;
         text-align: center;
@@ -132,16 +133,40 @@
         margin-top: 30px;
     }
     .consultation .feed-form {
-        margin: 30px auto;
+        padding: 30px auto;
     }
-
     .carusel .carusel__inner  {
             width: 100%;
             img {
             width: 100%;
-        }
-        
+        }      
     }
-
+    .catalog__tab div {
+        font-size: 10px;
+    }
+    .catalog .catalog-item {
+        margin-right: 0;
+    }
+    .feedback .feedback__content {
+        margin-left: 0;
+        padding: 0 20px;
+    }
+    .footer .footer__info {
+        position: static;
+        padding: 0;
+        height: 200px;
+        left: 0;
+        transform: none;
+    }
+    .footer .footer__addr {
+        margin-bottom: 20px;
+    }
+    .footer .footer__phone {
+        margin-bottom: 10px;
+    }
+    .modal .modal__close {
+        right: 10px;
+        top: 10px;
+    }
 
 }
