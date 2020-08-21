@@ -1,6 +1,9 @@
 @import './base/variables';
 @import './base/media';
 @import './base/animations';
+@import './libs/bootstrap-reboot.min';
+@import './libs/fonts';
+@import './libs/animate';
 
 * {
     font-family: 'Museo Sans Cyrl', sans-serif;
