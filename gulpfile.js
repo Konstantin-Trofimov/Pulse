@@ -4,8 +4,8 @@ const sass = require('gulp-sass');
 const cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
 const rename = require("gulp-rename");
-const htmlmin = require('gulp-htmlmin');
 const imagemin = require('gulp-imagemin');
+const htmlmin = require('gulp-htmlmin');
 
 gulp.task('server', function () {
 
@@ -44,18 +44,18 @@ gulp.task('scripts', function () {
         .pipe(gulp.dest("dist/js"));
 });
 
-gulp.task('icons', function () {
-    return gulp.src("src/icons/**/*")
-        .pipe(gulp.dest("dist/icons"));
-});
-
 gulp.task('fonts', function () {
     return gulp.src("src/fonts/**/*")
         .pipe(gulp.dest("dist/fonts"));
 });
 
+gulp.task('icons', function () {
+    return gulp.src("src/icons/**/*")
+        .pipe(gulp.dest("dist/icons"));
+});
+
 gulp.task('mailer', function () {
-    return gulp.src("src/fonts/**/*")
+    return gulp.src("src/mailer/**/*")
         .pipe(gulp.dest("dist/mailer"));
 });
 

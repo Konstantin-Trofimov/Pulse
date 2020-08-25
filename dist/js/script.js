@@ -83,8 +83,22 @@ $('document').ready(() => {
                     required: "Пожалуйста, введите свою почту",
                     email: "Неправильно введен адрес почты"
                 }
+            },
+            submitHandler: function (form) {
+                $.ajax({
+                    type: "POST",
+                    url: "mailer/smart.php",
+                    data: $(form).serialize()
+                }).done(function () {
+                    $(form).find("input").val("");
+                    $('#consultation, #order').fadeOut();
+                    $('.overlay, #thanks').fadeIn('slow');
+                    $('form').trigger('reset');
+                });
+                return false;
             }
         });
+
     }
 
     validateForms('#consultation form');
@@ -92,24 +106,6 @@ $('document').ready(() => {
     validateForms('#consultation-form');
 
     $('input[name=phone]').mask("+7(999)-999-9999");
-
-    $('form').on('submit', function (e) {
-        e.preventDefault();
-        $.ajax({
-            type: "POST",
-            url: "mailer/smart.php",
-            data: $(this).serialize()
-        }).done(function () {
-            $(this).find('input').val("");
-            $('#consultation, #order').fadeOut();
-            $('.overlay, #thanks').fadeIn('slow');
-
-
-
-            $('form').trigger('reset');
-        });
-        return false;
-    });
 
     $(window).scroll(function () {
         if ($(this).scrollTop() > 1600) {
